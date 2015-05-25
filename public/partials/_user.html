@@ -1,0 +1,17 @@
+<div class="container2">
+    <h1 class="info"><a href="#/years"  >{{year}}</a> | <a href="#/search/{{year}}/{{month}}"  >{{month}}</a> | {{day}}</h1>
+    <div class="hours" nop>
+        <div class="oneHour"  ng-repeat="hour in hours">
+            {{hour}}
+        </div>
+    </div>
+    <div class="addContent">
+        <div class="dateInfo">{{month}} | {{day}} | {{hour1}}-{{hour2}}</div>
+        <div class="content">Content:  <input  ng-model="content" placeholder="Enter an appointment" type="text"/></div>
+        <button ng-click="create(content)"> Create </button>
+    </div>
+    <div class="result">
+    </div>
+    <div class="goback"><a href="#/search/{{year}}/{{month}}"  >Go Back</a></div>
+</div>
+

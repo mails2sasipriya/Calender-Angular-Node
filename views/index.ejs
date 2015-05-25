@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular Route</title>
+    <script src="/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css"/>
+    <script src="/angular/angular.js"></script>
+    <script src="/angular-route/angular-route.js"></script>
+    <script src="/angular-animate/angular-animate.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="/javascripts/services.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+
+    <script>
+        angular.module('myapp', ['myapp.controllers', 'ngRoute', 'ngAnimate']).config(function ($routeProvider) {
+            $routeProvider .when('/years', {
+                templateUrl: '/partials/_years.html',
+                controller: 'yearController'
+            }).when('/search/:year/:month', {
+                templateUrl: '/partials/_search.html',
+                controller: 'MyController'
+            }).when('/users/:year/:month/:day', {
+                templateUrl: '/partials/_user.html',
+                controller: 'MyController2'
+
+            }).otherwise({
+                redirectTo: '/years'
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="outdiv"><div ng-view class="haha"></div></div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<div id="dayview">
+
+    <h1>{{year}} {{month}} {{day}}</h1>
+    <div class="timeslot-row" ng-class="slot.class"
+         ng-mousedown="mouseDown(slot, $event)" ng-mousemove="mouseMove(slot, $event)"
+         ng-mouseup="mouseUp(slot, $event)"
+         ng-repeat="slot in timeSlots"
+         on-slot-create>
+        {{slot.startTime.getHours() % 12 == 0 ? "12" : slot.startTime.getHours() % 12}}:
+        {{slot.startTime.getMinutes() < 10 ? "0" : ""}}{{slot.startTime.getMinutes()}}
+        {{slot.startTime.getHours() > 11 ? "PM" : "AM"}}</div>
+
+    <div id="id_appt_box" class="appt-box" ng-hide="!boxShow">
+        <label for="">Event</label>
+
+        <div id="appt_time"></div>
+
+        <div class="box-row">
+            <label for="">What</label>
+            <input type="text" ng-model="apptTitle"/>
+
+        </div>
+        <input id="create" type="button" value="Create Event" ng-click="saveAppt()"/>
+    </div>
+</div>

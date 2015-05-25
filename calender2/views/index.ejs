@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css"/>
+   <!-- <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css" /> -->
+
+    <script src="/angular/angular.js"></script>
+    <script src="/angular-route/angular-route.js"></script>
+    <script src="/angular-animate/angular-animate.js"></script>
+    <script src="/javascripts/services.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+
+    <script>
+        angular.module('myapp', ['myapp.controllers','ngRoute', 'ngAnimate']).config(function ($routeProvider) {
+            $routeProvider.when('/month', {
+                templateUrl: '/partials/month.html',
+                controller: 'MonthController'
+            }).when('/day/:year/:month/:day', {
+                templateUrl: '/partials/day.html',
+                controller: 'DayController'
+            }).otherwise({
+                redirectTo: '/month'
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div ng-view class="myview"></div>
+</body>
+</html>

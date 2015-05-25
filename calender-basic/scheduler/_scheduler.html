@@ -1,0 +1,8 @@
+<div class="scheduler-container clearfix" time_blocks="time_blocks">
+    <ul class="blocks">
+        <li ng-repeat="block in blocks">{{block | decimalTimeToHours}}</li>
+    </ul>
+    <ul class="schedules">
+        <li ng-mousemove="checkSelect(block)" ng-repeat="block in blocks" class="schedules-block" data-block="{{block | decimalTimeToHours}}"> <span></span></li>
+    </ul>
+</div>

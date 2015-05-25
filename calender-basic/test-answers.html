@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        // Question number 2
+        function invoke() {
+            var args = Array.prototype.slice.call(arguments);
+            var fn = args.shift();
+            return fn.apply(null, args);
+        }
+
+        function sum(x, y) {
+            return x + y;
+        }
+
+        console.log(invoke(sum, 1,2));
+
+        // Question number 3
+        for (var i = 0; i < 10; i++) {
+            setTimeout(function (i) {
+                console.log(i);
+            }.bind(window, i), i * 1000);
+        }
+
+        // Question number 12
+        function printParameters(fn) {
+            console.log('Name of the function: ', fn.name);
+            var str = fn.toString();
+            var re = /function\s[^(]+\(([^)]+)/;
+            var params = re.exec(str);
+            params = params[1].split(',').map(function (s) {
+                return s.trim();
+            });
+            console.log(params);
+        }
+
+        printParameters(sum);
+
+        // Question number 15
+        var o = Object.create({});
+        o.name = 'John';
+        var c = Object.create(o);
+        o.name = 'Priya';
+        console.log(c.hasOwnProperty('name'));
+
+        // Question number 17
+        function Anthropod() {
+            Anthropod.instances = Anthropod.instances || 0;
+            Anthropod.instances++;
+        }
+
+        Object.defineProperty(Anthropod.prototype, 'constr_invoked', {
+            get: function () {
+                return Anthropod.instances;
+            }
+        });
+
+        var shrimp = new Anthropod();
+        console.log(shrimp.constr_invoked); // return 1
+        var shrimp2 = new Anthropod();
+        console.log(shrimp.constr_invoked); // return 2
+        console.log(shrimp2.constr_invoked); // return 2
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

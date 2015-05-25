@@ -1,0 +1,111 @@
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', 'Open Sans';
+}
+
+div.container {
+    width : 40%;
+    margin:0 auto;
+    background-color: #e4e4e4;
+}
+div.date-header {
+    width:40%;
+    margin:0 auto;
+    text-align: center;
+    background-color: #31708f;
+    padding: 0.35em 0;
+    font-size: 2.5em;
+
+}
+span.arrow{
+    cursor: pointer;
+}
+span.arrow-lft{
+    float: left;
+ }
+span.arrow-rt{
+    float: right;
+ }
+
+
+
+div.blocks{
+    float: left;
+    width: 10%;
+    text-align: center;
+    padding: 0.35em 0.5em;
+    cursor: pointer;
+}
+div.blocks:hover {
+    background-color: grey;
+    color: white;
+}
+
+div.day {
+// color: transparent;
+}
+
+div.timeslot-row {
+    padding: 0.50em;
+    border:  0.1em solid #eee;
+    cursor: pointer;
+}
+div.timeslot-row.highlight {
+    background-color: lavender;
+}
+div.timeslot-row.highlight-dark {
+//  background-color: #000;
+}
+
+div.appt-box {
+    width: 300px;
+    border: 1px solid #000;
+    background-color: #e8e8e8;
+    padding: 8px;
+
+}
+div > label {
+    font-weight: bold;
+}
+
+div#appt_time {
+    padding: 0.35em;
+}
+div.box-row {
+    padding: 0.35em;
+}
+div.eventbox {
+    position: absolute;
+    width: 300px;
+    left: 100px;
+    background-color: #d3d3d3;
+    padding: 0.35em 0 0 0.35em;
+}
+
+/* animation code */
+
+.myview.ng-enter {
+    transition: all 3s ease;
+    opacity:0;
+}
+
+.myview.ng-enter {
+    opacity: 0;
+    transform: translateY(100px);
+}
+.myview.ng-enter.ng-enter-active {
+    opacity: 1;
+    background-color: white;
+    transform: translateY(0px);
+}
+.myview.ng-leave.ng-leave-active{
+    opacity:1;
+    background-color: white;
+}
+.myview.ng-leave{
+    opacity:0;
+}
+
+.myview {
+//  padding: 1em;
+}

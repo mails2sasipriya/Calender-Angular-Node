@@ -1,0 +1,23 @@
+
+<div>
+    <div class="date-header">
+        <span class="arrow arrow-lft" id="prev_year">&lt;&lt;</span>
+        <span class="arrow" id="prev_month">&lt;</span>&nbsp;&nbsp;
+        <span class="header-text">{{mymonth}} {{myyear}}</span>&nbsp;&nbsp;
+        <span class="arrow" id="next_month">&gt;</span>
+
+        <span class="arrow arrow-rt" id="next_year">&gt;&gt;</span>
+
+    </div>
+
+
+    <div class="container">
+            <div class="blocks" ng-repeat="day in weekdays">{{day}}</div>
+            <div class="blocks" ng-repeat="day in firstSet">{{day.day}}</div>
+            <div class="blocks" ng-click="selectDay(day.day)" ng-repeat="day in secondSet">{{day.day}}</div>
+            <div class="blocks" ng-repeat="day in thirdSet">{{day.day}}</div>
+    </div>
+
+</div>
+
+

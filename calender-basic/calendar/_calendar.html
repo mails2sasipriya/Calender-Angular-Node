@@ -1,0 +1,21 @@
+<div class="calendar-container clearfix">
+    <div class="top-bar">
+        <a href="#">Prev</a>
+        {{month | convertToMonth}}, {{year}}
+        <a href="#">Next</a>
+    </div>
+    <div class="days-of-week">
+        <div class="date">S</div>
+        <div class="date">M</div>
+        <div class="date">T</div>
+        <div class="date">W</div>
+        <div class="date">T</div>
+        <div class="date">F</div>
+        <div class="date">S</div>
+    </div>
+    <div class="dates clearfix">
+        <div ng-class="{'date': true, 'prev-month': date.month_type === 0, 'next-month': date.month_type === 2}" ng-repeat="date in dates">{{date.date}}</div>
+    </div>
+</div>
+
+<div scheduler blocks="blocks"></div>

@@ -1,0 +1,227 @@
+body {
+    font: 200 2em 'Helvetica Neue', 'Segoe UI', 'Droid Sans', 'Helvetica';
+    padding: 3em;
+    margin: 0;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.outdiv{
+    perspective: 5000px;
+    transform-style: preserve-3d;
+}
+.haha.ng-enter {
+    transition: all linear 0.2s;
+    opacity: 0;
+    transform:rotateY(180deg);
+    transform-origin: 50% 50%;
+}
+
+.haha.ng-enter.ng-enter-active {
+    opacity: 1;
+    color: #F1F1F1;
+    transform:rotateY(0deg);
+
+}
+.haha.ng-leave {
+
+    opacity: 1;
+}
+.haha.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.monthshows{
+    width: 25%;
+    float:left;
+    border: 1px solid #F1F1F1;
+    text-align: center;
+    padding:2em;
+}
+
+.monthshows:hover{
+    background-color: #F1F1F1;
+    color:#477BC4;
+    cursor: pointer;
+}
+
+.dayblock{
+    width: 14.2857%;
+    float:left;
+    border: 1px solid #F1F1F1;
+    text-align: center;
+    padding:0.5em;
+}
+
+.dayblock.days2:hover{
+    background-color: #F1F1F1;
+    color:#477BC4;
+    cursor: pointer;
+}
+
+.weekday{
+    background-color: #F1F1F1;
+    color:#477BC4;
+    text-align: center;
+    padding: 0.5em;
+    border: 1px solid #477BC4
+}
+
+.container{
+    width:40%;
+    margin:0 auto;
+    padding:0;
+
+
+}
+
+
+.days1,.days3 {
+    color: transparent;
+
+}
+
+.h1{
+    text-align: center;
+
+    display: inline-block;
+    margin-top:0;
+    width:94%;
+
+
+}
+.left{
+    text-align: center;
+    color:white;
+    background: #F1F1F1;
+
+    float:left;
+}
+
+.left:hover,.right:hover{
+    cursor: pointer;
+    color:purple;
+}
+
+.right{
+    text-align: center;
+    color:white;
+    background: #F1F1F1;
+    float:right;
+}
+
+.right:after{
+    clear:both;
+}
+
+.container2{
+    position:relative;
+    width:40%;
+    margin:0 auto;
+}
+
+
+.container3{
+    width:40%;
+    margin:3px auto;
+    color:white;
+    background: #F1F1F1;
+}
+.hours{
+    float:left;
+    width:100%;
+    cursor:pointer;
+}
+
+
+.addContent{
+    height:170px;
+    width:300px;
+    background:#eee;
+    display:none;
+    margin: 0 500px;
+    position:absolute;
+
+}
+
+.result{
+
+    width:300px;
+    background:#eee;
+    display:none;
+    margin: 220px 500px;
+    position:absolute;
+}
+
+.info,.dateInfo{
+    background-color: #F1F1F1;
+    color:white;
+    text-align: center;
+    padding: 0.5em;
+}
+.oneHour{
+    border:1px solid #F1F1F1;
+    border-collapse: inherit;
+    padding:0.5em;
+}
+
+.purple{
+
+    border:1px solid #F1F1F1;
+    border-collapse: inherit;
+    padding:0.5em;
+
+}
+
+.content,.goback{
+    padding:0.5em
+}
+
+button{
+
+    margin:0 0.5em;
+}
+
+.year{
+    text-align: center;
+    color:white;
+    background: #F1F1F1;
+    padding:0.5em;
+    margin-bottom:0.3em;
+
+}
+
+a{
+    color:white;
+}
+
+a:hover{
+    color:purple;
+}
+
+.appointments{
+    display: inline-block;
+    border:0.5px solid #eee;
+}
+
+.appointments{
+
+}
+.ng-binding {
+    color: #477BC4;
+}
+
+.h1, h1.ng-binding{
+    width:90%;
+    text-align: center;
+}
+
+div.left > h1, div.right > h1 {
+    color: #477BC4;
+    padding: 1px;
+}
+.days1, .days3 {
+    text-indent: -2000px
+}
